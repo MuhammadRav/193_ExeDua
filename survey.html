@@ -15,6 +15,16 @@
 
             <label for="age">Masukkan usia anda:</label>
             <input type="number" id="age" name="age" required>
+
+            <label for="rating">Berikan rating untuk pertarungan tersebut:</label>
+            <div class="rating-container">
+                <button type="button" onclick="displayRating(1)">&#9734;</button>
+                <button type="button" onclick="displayRating(2)">&#9734;</button>
+                <button type="button" onclick="displayRating(3)">&#9734;</button>
+                <button type="button" onclick="displayRating(4)">&#9734;</button>
+                <button type="button" onclick="displayRating(5)">&#9734;</button>
+            </div>
+            <div id="rating-result"></div>
         </form>
     </div>
 </body>
