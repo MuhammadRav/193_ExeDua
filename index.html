@@ -69,6 +69,22 @@
             border-radius: 5px;
         }
     </style>
+    <script>
+        function displayRating(stars) {
+            const ratingButtons = document.querySelectorAll('.rating-container button');
+            ratingButtons.forEach((button, index) => {
+                button.style.color = index < stars ? 'yellow' : '#ccc';
+            });
+
+            document.getElementById('rating-result').innerText = `Rating: ${stars} bintang`;
+        }
+
+        function submitSurvey(event) {
+            event.preventDefault();
+            const stars = parseInt(document.getElementById('rating-result').innerText.split(' ')[1]);
+            showAlert(stars);
+        }
+    </script>
 </head>
 
 <body>
