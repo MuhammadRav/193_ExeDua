@@ -4,112 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuroashi no Sanji</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .survey-container {
-            max-width: 600px;
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            margin-top: 10px;
-        }
-        input, select, button {
-            padding: 10px;
-            margin-top: 5px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        .rating-container {
-            display: flex;
-            gap: 5px;
-            margin-top: 10px;
-            justify-content: center;
-        }
-        .rating-container button {
-            width: 40px;
-            background: none;
-            border: none;
-            font-size: 30px;
-            cursor: pointer;
-            color: #ccc; /* Warna default */
-            font-weight: bold; /* Membuat teks tebal */
-        }
-        .notification {
-            text-align: center;
-            margin-top: 20px;
-            color: green;
-        }
-        .button-container {
-            text-align: right;
-            margin-top: 20px;
-        }
-        .button-container a {
-            text-decoration: none;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            border-radius: 5px;
-        }
-    </style>
-    <script>
-        function displayRating(stars) {
-            const ratingButtons = document.querySelectorAll('.rating-container button');
-            ratingButtons.forEach((button, index) => {
-                button.style.color = index < stars ? 'yellow' : '#ccc';
-            });
-
-            document.getElementById('rating-result').innerText = `Rating: ${stars} bintang`;
-        }
-
-        function submitSurvey(event) {
-            event.preventDefault();
-            const stars = parseInt(document.getElementById('rating-result').innerText.split(' ')[1]);
-            showAlert(stars);
-        }
-        function showAlert(stars) {
-            let message;
-            switch (stars) {
-                case 1:
-                    message = "MENDAPAT RATING 1 ⭐\n\n'Maaf, kami akan membuat pertarungan lain menjadi lebih baik'";
-                    break;
-                case 2:
-                    message = "MENDAPAT RATING 2 ⭐⭐\n\n'Yah, kami akan membuat pertarungan yang lain dengan efek pertarungan yang lebih menarik'";
-                    break;
-                case 3:
-                    message = "MENDAPAT RATING 3 ⭐⭐⭐\n\n'Kami berusaha membuat pertarungan yang lebih menantang dan seru'";
-                    break;
-                case 4:
-                    message = "MENDAPAT RATING 4 ⭐⭐⭐⭐\n\n'Terimakasih, kami senang anda menikmatinya, kami akan membuat anda lebih senang di pertarungan selanjutnya'";
-                    break;
-                case 5:
-                    message = "MENDAPAT RATING 5 ⭐⭐⭐⭐⭐\n\n'Yohohoho, kami akan mempertahankan kualitas pertarungan dan membuatnya lebih memanas dan menantang 🔥🔥🔥'";
-                    break;
-                default:
-                    message = "Terjadi kesalahan dalam menampilkan pemberitahuan";
-            }
-            alert(message);
-        }
-    </script>
+    
 </head>
-
 <body>
     <div class="content-container">
         <h1>Vinsmoke Sanji, the left hand of the Pirate King</h1>
@@ -143,5 +39,4 @@
         <a href="survey.html">Survey</a>
     </div>
 </body>
-
 </html>
