@@ -84,6 +84,29 @@
             const stars = parseInt(document.getElementById('rating-result').innerText.split(' ')[1]);
             showAlert(stars);
         }
+        function showAlert(stars) {
+            let message;
+            switch (stars) {
+                case 1:
+                    message = "MENDAPAT RATING 1 ⭐\n\n'Maaf, kami akan membuat pertarungan lain menjadi lebih baik'";
+                    break;
+                case 2:
+                    message = "MENDAPAT RATING 2 ⭐⭐\n\n'Yah, kami akan membuat pertarungan yang lain dengan efek pertarungan yang lebih menarik'";
+                    break;
+                case 3:
+                    message = "MENDAPAT RATING 3 ⭐⭐⭐\n\n'Kami berusaha membuat pertarungan yang lebih menantang dan seru'";
+                    break;
+                case 4:
+                    message = "MENDAPAT RATING 4 ⭐⭐⭐⭐\n\n'Terimakasih, kami senang anda menikmatinya, kami akan membuat anda lebih senang di pertarungan selanjutnya'";
+                    break;
+                case 5:
+                    message = "MENDAPAT RATING 5 ⭐⭐⭐⭐⭐\n\n'Yohohoho, kami akan mempertahankan kualitas pertarungan dan membuatnya lebih memanas dan menantang 🔥🔥🔥'";
+                    break;
+                default:
+                    message = "Terjadi kesalahan dalam menampilkan pemberitahuan";
+            }
+            alert(message);
+        }
     </script>
 </head>
 
